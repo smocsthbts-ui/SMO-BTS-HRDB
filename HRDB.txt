@@ -26,8 +26,8 @@
 - UX UI Style Siemens IX Industry https://ix.siemens.io/docs/home/getting-started/starter-app มีฟังก์ชั่น Dark/Light Mode โดยค่าเริ่มต้นจะเป็น Dark Mode และการแสดงผลแบบ Full Screen ของพื้นที่ทำงาน
 - Deploy Project เชื่อม GitHub และ cloudflare โดยใช้ Backend เป็น Supabase ช่วยแนะนำขั้นตอนนี้เป็น Step by Step ใชช่วงสุดท้าย
 ***ไฟล์ตัวอย่าง***
-Shift Plan.xlsx 
-Shift Code.xlsx
-OT.xlsx
+Shift Plan.csv โดยปกติเป็นไฟล์ excel อับโหลดตารางทำงาน
+Shift Code.csv โดยปกติเป็นไฟล์ excel อับโหลด shift code
+OT.csv โดยปกติเป็นไฟล์ excel อับโหลด OT
 Time Attendance.txt
 Time Sheet.png

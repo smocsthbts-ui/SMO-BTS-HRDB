@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+﻿import { createClient } from '@supabase/supabase-js';
 
 // Default / fallback keys from localStorage or env
 const envUrl = import.meta.env.VITE_SUPABASE_URL || '';
@@ -29,7 +29,7 @@ export function getSupabaseClient() {
 /**
  * Complete SQL DDL schema for user to execute in Supabase SQL Editor
  */
-export const SUPABASE_SCHEMA_SQL = -- SMO BTS HRDB - PostgreSQL Schema for Supabase
+export const SUPABASE_SCHEMA_SQL = `-- SMO BTS HRDB - PostgreSQL Schema for Supabase
 -- Multi-Department Shift & Time Sheet Management System
 
 -- 1. Departments Table
@@ -160,8 +160,7 @@ CREATE TABLE IF NOT EXISTS public.timesheet_daily_overrides (
   code_leave VARCHAR(20),
   code VARCHAR(20),
   remark TEXT,
-  edited_by UUID REFERENCES auth.users(id),
-  updated_at TIMESTAMPTZ DEFAULT now(),
+  created_at TIMESTAMPTZ DEFAULT now(),
   UNIQUE(emp_no, date)
 );
 
@@ -181,4 +180,4 @@ CREATE POLICY "Allow authenticated read departments" ON public.departments FOR S
 CREATE POLICY "Allow authenticated read shift_codes" ON public.shift_codes FOR SELECT TO authenticated USING (true);
 CREATE POLICY "Allow authenticated read employees" ON public.employees FOR SELECT TO authenticated USING (true);
 CREATE POLICY "Allow authenticated read plans" ON public.monthly_shift_plans FOR SELECT TO authenticated USING (true);
-;
+`;
